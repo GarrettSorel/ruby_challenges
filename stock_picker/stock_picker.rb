@@ -9,7 +9,7 @@ def stock_picker(arr)
   buy = 0
   sell = 0
 
-  for i in 0..(arr.length-2) do
+  for i in 0..(arr.length-1) do
     for j in (i+1)..(arr.length-1) do
       if arr[j] - arr[i] > highest_value
         highest_value = arr[j] - arr[i]
@@ -18,6 +18,7 @@ def stock_picker(arr)
       end
     end
   end
+
   answer.push(buy)
   answer.push(sell)
 

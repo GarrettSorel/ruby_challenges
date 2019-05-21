@@ -1,13 +1,13 @@
 def caesar_cipher(str, num)
   #create a Hash with lowercase letters corresponding the the number provided
   #example: 5, {a => e}
-  alphabet = Array('a'..'z')
-  non_caps = Hash[alphabet.zip(alphabet.rotate(num))]
+  alphabet_lower = Array('a'..'z')
+  non_caps = Hash[alphabet_lower.zip(alphabet_lower.rotate(num))]
 
   #create a Hash with uppercase letters corresponding the the number provided
   #example: 5, {A => E}
-  alphabet = Array('A'..'Z')
-  caps = Hash[alphabet.zip(alphabet.rotate(num))]
+  alphabet_upper = Array('A'..'Z')
+  caps = Hash[alphabet_upper.zip(alphabet_upper.rotate(num))]
 
 
   #merge two Hashes together
